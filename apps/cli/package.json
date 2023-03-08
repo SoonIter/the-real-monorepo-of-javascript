@@ -1,0 +1,13 @@
+{
+  "name": "@pnpm-lock-end/cli",
+  "version": "1.0.0",
+  "description": "this is an end application, you should not install any dependencies, use them as devDependencies and bundle them all",
+  "main": "index.js",
+  "devDependencies": {
+    "@pnpm-lock-end/util": "workspace:*",
+    "@pnpm-lock-end/sdk": "workspace:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

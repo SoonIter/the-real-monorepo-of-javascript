@@ -1,0 +1,12 @@
+{
+  "name": "@pnpm-lock-end/infra",
+  "version": "1.0.0",
+  "description": "you can write some infra devDependencies here, but do not use this package as dependencies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

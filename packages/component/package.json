@@ -1,0 +1,16 @@
+{
+  "name": "@pnpm-lock-end/component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "devDependencies": {
+    "react": "18.2.0"
+  },
+  "peerDependencies": {
+    "react": "^18"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
