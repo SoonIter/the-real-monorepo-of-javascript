@@ -2,6 +2,26 @@
 
 This example shows what a real monorepo is
 
+```txt
+── apps
+│   ├── cli
+│   │   ├── package.json
+│   │   ├── pnpm-lock.yaml
+│   │   └── pnpm-workspace.yaml
+│   └── web
+│       ├── package.json
+│       ├── pnpm-lock.yaml
+│       └── pnpm-workspace.yaml
+├── package.json
+└── packages
+    ├── component
+    │   └── package.json
+    ├── sdk
+    │   └── package.json
+    └── util
+        └── package.json
+```
+
 Do not link the workspace package. They should be treated as third-party packages.
 
 only the end app/cli that bundles all the code to user need lock
