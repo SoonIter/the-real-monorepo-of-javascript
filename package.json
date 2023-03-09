@@ -1,5 +1,5 @@
 {
-  "name": "@pnpm-lock-end/infra",
+  "name": "@cargo-monorepo/infra",
   "version": "1.0.0",
   "description": "you can write some infra devDependencies here, but do not use this package as dependencies",
   "main": "index.js",

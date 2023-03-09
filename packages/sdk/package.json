@@ -1,5 +1,5 @@
 {
-  "name": "@pnpm-lock-end/sdk",
+  "name": "@cargo-monorepo/sdk",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

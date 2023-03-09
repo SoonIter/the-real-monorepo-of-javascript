@@ -31,15 +31,25 @@
 
 - package-based: 每个包都是一个独立的个体，彼此之间开发不受影响，每个包可以独立开发、构建
 
+- lockfile: 语义化版本的锁文件，如 `package-lock.json yarn.lock pnpm-lock.yaml`
+
 ## 该结构是什么？
 
 由 [Cargo](https://rustwiki.org/en/cargo/faq.html#why-do-binaries-have-cargolock-in-version-control-but-not-libraries) 启发而来
 
-1. literally package-based，以每个包为中心，安装依赖(install)、构建(build)(会同时构建其子依赖)、运行(run)，而发布(publish)，则是以整个 git repo 为单位进行。
+1. 以每个包为中心，安装依赖(install)、构建(build)(会同时构建其子依赖)、运行(run)，而发布(publish)，则是以整个 git repo 为单位进行。
 
-2. split-lockfile，每个子应用记录自己的 `devDependencies-lock.yaml`，在构建之前以自己为中心 `install`，仅自己的 lock 会起作用
+2. 将 pnpm 原来直接 link workspace 的行为，修改为只 link `package.json` 中声明发布的内容，并根据 lock 安装指定依赖
 
-3. devDependencies-lockfile，不会锁定运行时相关 dependencies，只锁构建相关的依赖 比如 devDependencies 中的 webpack、vite，和工具链相关的依赖，比如 node、npm、eslint、prettier、lint-staged 等，而 end-project 理应将所有依赖都算为 "devDependencies"
+如: `component -> util`
+
+util: 使用 util 的 `devDependencies-lock.yaml` 在 util 目录 install，之后 `npm run build`
+
+component: 使用 component 的 `devDependencies-lock.yaml` 在 component 目录 install，之后 `npm run build`
+
+3. 独立的 lockfile，每个子应用记录自己的 `devDependencies-lock.yaml`，在构建之前以自己为中心 `install`，仅自己的 lock 会起作用
+
+4. devDependencies-lockfile，不会锁定运行时相关 dependencies，只锁构建相关的依赖 比如 devDependencies 中的 webpack、vite，和工具链相关的依赖，比如 node、npm、eslint、prettier、lint-staged 等，而 end-project 理应将所有依赖都算为 "devDependencies"
 
 4. 和 Cargo 类似的 `install+build` 任务编排，一个具体的实例
 
@@ -49,11 +59,12 @@
 
 通常的执行顺序为：
 
-> 注: install:(a,b,c) 是指以 a 为中心的 install, 但由于b,c 为 a 的依赖，所以b和c也会被创建 node_modules
 
 ```txt
-install:(app,component,util) -> build:util -> build:component -> build:app 
+install:(app,component,util):pnpm-workspace.yaml -> build:util -> build:component -> build:app 
 ```
+
+> 注: install:(a,b,c) 是指使用 a 的 `devDependencies-lock.yaml` 在 a 目录下 install, 但由于 b,c 为 a 的依赖，所以 b 和 c 也会被创建 node_modules
 
 但理论上的安全且稳定的执行顺序应为：
 

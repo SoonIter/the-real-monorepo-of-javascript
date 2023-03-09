@@ -1,5 +1,5 @@
 {
-  "name": "@pnpm-lock-end/web",
+  "name": "@cargo-monorepo/web",
   "version": "1.0.0",
   "description": "this is an end application, you should not install any dependencies, use them as devDependencies and bundle them all",
   "main": "index.js",

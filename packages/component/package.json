@@ -1,11 +1,12 @@
 {
-  "name": "@pnpm-lock-end/component",
+  "name": "@cargo-monorepo/component",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {},
   "devDependencies": {
-    "react": "18.2.0"
+    "react": "18.2.0",
+    "@cargo-monorepo/component": "workspace:*" 
   },
   "peerDependencies": {
     "react": "^18"
