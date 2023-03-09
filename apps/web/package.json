@@ -1,17 +1,19 @@
 {
-  "name": "@cargo-monorepo/web",
+  "name": "@real-monorepo/web",
   "version": "1.0.0",
   "description": "this is an end application, you should not install any dependencies, use them as devDependencies and bundle them all",
   "main": "index.js",
   "scripts": {
-    "build": "pnpm install && tsup src/index.ts"
+    "build": "pnpm install && rspack build"
   },
   "devDependencies": {
     "react": "^18.2.0",
-    "tsup": "^6.6.3",
-    "@cargo-monorepo/component": "workspace:*"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT"
+    "react-dom": "^18.2.0",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.8",
+    "@rspack/cli": "latest",
+    "typescript": "^4.9.5",
+    "@svgr/webpack": "6.5.1",
+    "@real-monorepo/component": "workspace:*"
+  }
 }

@@ -1,14 +1,15 @@
 {
-  "name": "@cargo-monorepo/component",
+  "name": "@real-monorepo/component",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "pnpm install && tsup src/index.ts"
+    "build": "pnpm install && tsup src/index.ts --dts"
   },
   "devDependencies": {
     "react": "18.2.0",
-    "@cargo-monorepo/util": "workspace:*",
+    "@real-monorepo/util": "workspace:*",
     "tsup": "^6.6.3"
   },
   "peerDependencies": {

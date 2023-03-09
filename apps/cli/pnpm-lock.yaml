@@ -4,12 +4,12 @@ importers:
 
   .:
     specifiers:
-      '@cargo-monorepo/sdk': workspace:*
-      '@cargo-monorepo/util': workspace:*
+      '@real-monorepo/sdk': workspace:*
+      '@real-monorepo/util': workspace:*
       tsup: ^6.6.3
     devDependencies:
-      '@cargo-monorepo/sdk': link:../../packages/sdk
-      '@cargo-monorepo/util': link:../../packages/util
+      '@real-monorepo/sdk': link:../../packages/sdk
+      '@real-monorepo/util': link:../../packages/util
       tsup: 6.6.3
 
   ../../packages/sdk:

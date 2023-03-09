@@ -1,11 +1,14 @@
 {
-  "name": "@cargo-monorepo/cli",
+  "name": "@real-monorepo/cli",
   "version": "1.0.0",
   "description": "this is an end application, you should not install any dependencies, use them as devDependencies and bundle them all",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "bin": {
+    "cli": "./dist/index"
+  },
   "devDependencies": {
-    "@cargo-monorepo/util": "workspace:*",
-    "@cargo-monorepo/sdk": "workspace:*",
+    "@real-monorepo/util": "workspace:*",
+    "@real-monorepo/sdk": "workspace:*",
     "tsup": "^6.6.3"
   },
   "scripts": {

@@ -4,11 +4,11 @@ importers:
 
   .:
     specifiers:
-      '@cargo-monorepo/util': workspace:*
+      '@real-monorepo/util': workspace:*
       react: 18.2.0
       tsup: ^6.6.3
     devDependencies:
-      '@cargo-monorepo/util': link:../util
+      '@real-monorepo/util': link:../util
       react: 18.2.0
       tsup: 6.6.3
 
