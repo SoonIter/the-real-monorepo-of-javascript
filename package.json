@@ -4,12 +4,13 @@
   "description": "you can write some infra devDependencies here, but do not use this package as dependencies",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "moon": "./node_modules/.bin/moon"
   },
   "devDependencies": {
     "lint-staged": "^13.1.2",
     "eslint": "^8.35.0",
-    "@commitlint/cli": "^17.4.4"
+    "@commitlint/cli": "^17.4.4",
+    "@moonrepo/cli": "^0.24.0"
   },
   "keywords": [],
   "author": "",

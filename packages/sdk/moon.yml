@@ -1,0 +1,9 @@
+tasks:
+  install:
+    command: 'pnpm install'
+  build:
+    command: 'pnpm run build'
+    inputs: ['src/**/*']
+    deps:
+      - 'install'
+      - 'util:build'

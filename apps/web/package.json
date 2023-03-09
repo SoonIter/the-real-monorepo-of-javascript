@@ -4,7 +4,7 @@
   "description": "this is an end application, you should not install any dependencies, use them as devDependencies and bundle them all",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "mkdir -p dist && echo 'console.log('web')' > dist/index.js"
   },
   "devDependencies": {
     "react": "^18.2.0"

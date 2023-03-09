@@ -7,6 +7,9 @@
     "@cargo-monorepo/util": "workspace:*",
     "@cargo-monorepo/sdk": "workspace:*"
   },
+  "scripts": {
+    "build": "mkdir -p dist && echo 'console.log('cli')' > dist/index.js"
+  },
   "keywords": [],
   "author": "",
   "license": "MIT"

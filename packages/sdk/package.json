@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "mkdir ./dist -p && echo 'console.log('sdk');' > ./dist/index.js"
   },
   "dependencies": {
     "debug": "^4.3.4"

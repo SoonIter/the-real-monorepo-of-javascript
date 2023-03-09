@@ -4,23 +4,13 @@ importers:
 
   .:
     specifiers:
-      react: ^18.2.0
-    devDependencies:
-      react: 18.2.0
-
-  ../../packages/component:
-    specifiers:
+      '@cargo-monorepo/util': workspace:*
       react: 18.2.0
     devDependencies:
+      '@cargo-monorepo/util': link:../util
       react: 18.2.0
 
-  ../../packages/sdk:
-    specifiers:
-      debug: ^4.3.4
-    dependencies:
-      debug: 4.3.4
-
-  ../../packages/util:
+  ../util:
     specifiers:
       debug: ^4.3.4
     dependencies:

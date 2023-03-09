@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "mkdir -p dist && echo 'console.log('component')' > dist/index.js"
+  },
   "devDependencies": {
     "react": "18.2.0",
-    "@cargo-monorepo/component": "workspace:*" 
+    "@cargo-monorepo/util": "workspace:*" 
   },
   "peerDependencies": {
     "react": "^18"
