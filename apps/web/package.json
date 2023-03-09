@@ -4,10 +4,12 @@
   "description": "this is an end application, you should not install any dependencies, use them as devDependencies and bundle them all",
   "main": "index.js",
   "scripts": {
-    "build": "mkdir -p dist && echo 'console.log('web')' > dist/index.js"
+    "build": "pnpm install && tsup src/index.ts"
   },
   "devDependencies": {
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "tsup": "^6.6.3",
+    "@cargo-monorepo/component": "workspace:*"
   },
   "keywords": [],
   "author": "",

@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "mkdir ./dist -p && echo 'console.log('sdk');' > ./dist/index.js"
+    "build": "pnpm install && tsup src/index.ts"
   },
   "dependencies": {
     "debug": "^4.3.4"
+  },
+  "devDependencies": {
+    "tsup": "^6.6.3"
   },
   "keywords": [],
   "author": "",

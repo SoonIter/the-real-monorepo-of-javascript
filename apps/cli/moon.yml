@@ -1,10 +1,8 @@
 tasks:
-  install:
-    command: 'pnpm install'
   build:
-    command: 'pnpm run build'
+    command: 
+      - pnpm run build
     inputs: ['src/**/*']
     deps:
-      - 'install'
-      - 'util:build'
-      - 'sdk:build'
+      - "sdk:build"
+      - "util:build"

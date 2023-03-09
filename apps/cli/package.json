@@ -5,10 +5,11 @@
   "main": "index.js",
   "devDependencies": {
     "@cargo-monorepo/util": "workspace:*",
-    "@cargo-monorepo/sdk": "workspace:*"
+    "@cargo-monorepo/sdk": "workspace:*",
+    "tsup": "^6.6.3"
   },
   "scripts": {
-    "build": "mkdir -p dist && echo 'console.log('cli')' > dist/index.js"
+    "build": "pnpm install && tsup src/index.ts"
   },
   "keywords": [],
   "author": "",
