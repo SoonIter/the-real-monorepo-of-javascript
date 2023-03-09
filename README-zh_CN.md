@@ -154,3 +154,20 @@ install:(util)         install:(component, util)            install:(app, util, 
 
 在 component 目录下 `npm run build`
 
+
+## 示例工程 —— 本仓库
+
+本仓库是由 moonrepo 起的概念工程，仅实现了部分功能，但是你仍然能够感到丝滑流畅的 monorepo build 流程
+
+### 快速开始 
+
+```bash
+> git clone git@github.com:SoonIter/the-real-monorepo-of-javascript.git
+
+> npm run bootstrap  # 根目录
+> npm run web:build or npm run cli:build
+```
+
+### 尚未实现
+
+- 将`pnpm-lock.yaml`转换为`dev-dependencies.yaml`，并安装依赖 子 workspace 的直接依赖项

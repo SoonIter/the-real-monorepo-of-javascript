@@ -154,3 +154,19 @@ The product of util will be linked and the dependency on "lodash" will be comple
 **Build:component**:
 
 In the component directory `npm run build`
+
+
+## Sample Project - This git-repo
+
+This warehouse is a conceptual project started by moonrepo, which only implements some functions, but you can still feel the smooth monorepo build process.
+
+### quick start
+
+```bash
+> git clone git@github.com:SoonIter/the-real-monorepo-of-javascript.git
+
+> npm run bootstrap  # 根目录
+> npm run web:build or npm run cli:build
+```
+
+- transform `pnpm-lock.yaml` to `dev-dependencies.yaml` and install the dependencies of dependent sub workspace 
