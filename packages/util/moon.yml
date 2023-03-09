@@ -1,9 +1,7 @@
 tasks:
-  install:
-    command: 'pnpm install'
   build:
-    command: 'pnpm run build'
+    command: pnpm run build
     inputs: ['src/**/*']
+    outputs: ['dist']
     deps:
-      - 'install'
-      - '^:build'
+      - "^:build"

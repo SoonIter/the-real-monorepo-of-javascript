@@ -1,11 +1,7 @@
-language: typescript
-
 tasks:
-  install:
-    command: 'pnpm install'
   build:
-    command: 'pnpm run build'
+    command: pnpm run build
     inputs: ['src/**/*']
+    outputs: ['dist']
     deps:
-      - 'install'
-      - 'component:build'
+      - "^:build"

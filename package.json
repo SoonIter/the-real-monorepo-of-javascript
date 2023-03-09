@@ -4,9 +4,16 @@
   "description": "you can write some infra devDependencies here, but do not use this package as dependencies",
   "main": "index.js",
   "scripts": {
-    "moon": "./node_modules/.bin/moon"
+    "moon": "./node_modules/.bin/moon",
+    "web:build": "moon run web:build",
+    "cli:build": "moon run cli:build",
+    "reset": "npm run rm:cache && npm run rm:node_modules && npm run rm:dist",
+    "rm:cache": "rm -rf ./.moon/cache",
+    "rm:dist": "rimraf -g ./packages/**/dist && rimraf -g ./apps/**/dist",
+    "rm:node_modules": "rimraf -g apps/**/node_modules && rimraf -g packages/**/node_modules"
   },
   "devDependencies": {
+    "rimraf": "^4.4.0",
     "lint-staged": "^13.1.2",
     "eslint": "^8.35.0",
     "@commitlint/cli": "^17.4.4",

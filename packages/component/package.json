@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "mkdir -p dist && echo 'console.log('component')' > dist/index.js"
+    "build": "pnpm install && tsup src/index.ts"
   },
   "devDependencies": {
     "react": "18.2.0",
-    "@cargo-monorepo/util": "workspace:*" 
+    "@cargo-monorepo/util": "workspace:*",
+    "tsup": "^6.6.3"
   },
   "peerDependencies": {
     "react": "^18"
