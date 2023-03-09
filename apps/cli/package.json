@@ -2,9 +2,8 @@
   "name": "@real-monorepo/cli",
   "version": "1.0.0",
   "description": "this is an end application, you should not install any dependencies, use them as devDependencies and bundle them all",
-  "main": "dist/index.js",
   "bin": {
-    "cli": "./dist/index"
+    "cli": "./dist/index.js"
   },
   "devDependencies": {
     "@real-monorepo/util": "workspace:*",
