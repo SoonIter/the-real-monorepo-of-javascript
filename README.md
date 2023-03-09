@@ -1,9 +1,9 @@
-# pnpm-lock-end
+# real-package-based-monorepo
 
 This example shows what a real monorepo is
 
 ```txt
-── apps
+├── apps
 │   ├── cli
 │   │   ├── package.json
 │   │   ├── pnpm-lock.yaml
@@ -15,10 +15,13 @@ This example shows what a real monorepo is
 ├── package.json
 └── packages
     ├── component
+    │   ├── devDependencies-lock.yaml
     │   └── package.json
     ├── sdk
+    │   ├── devDependencies-lock.yaml
     │   └── package.json
     └── util
+        ├── devDependencies-lock.yaml
         └── package.json
 ```
 
