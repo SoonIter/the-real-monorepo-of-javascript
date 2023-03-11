@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "pnpm install && tsup src/index.ts --dts"
+    "build": "tsup src/index.ts --dts"
   },
   "devDependencies": {
     "react": "18.2.0",

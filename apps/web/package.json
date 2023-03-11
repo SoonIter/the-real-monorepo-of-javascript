@@ -4,7 +4,7 @@
   "description": "this is an end application, you should not install any dependencies, use them as devDependencies and bundle them all",
   "main": "index.js",
   "scripts": {
-    "build": "pnpm install && rspack build"
+    "build": "rspack build"
   },
   "devDependencies": {
     "react": "^18.2.0",

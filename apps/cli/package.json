@@ -11,7 +11,8 @@
     "tsup": "^6.6.3"
   },
   "scripts": {
-    "build": "pnpm install && tsup src/index.ts"
+    "dev": "tsup src/index.ts --watch",
+    "build": "tsup src/index.ts"
   },
   "keywords": [],
   "author": "",

@@ -1,7 +1,13 @@
 tasks:
-  build:
-    command: pnpm run build
-    inputs: ['src/**/*']
+  dev:
+    command: pnpm run dev
+    inputs: ['src/**/*', 'package.json']
     outputs: ['dist']
     deps:
-      - "^:build"
+      - '^:build'
+  build:
+    command: pnpm run build
+    inputs: ['src/**/*', 'package.json']
+    outputs: ['dist']
+    deps:
+      - '^:build'

@@ -1,14 +1,15 @@
 {
   "name": "@real-monorepo/infra",
-  "version": "1.0.0",
+  "version": "",
+  "private": true,
   "description": "you can write some infra devDependencies here, but do not use this package as dependencies",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "bootstrap": "yarn",
     "moon": "./node_modules/.bin/moon",
     "web:build": "moon run web:build",
     "cli:build": "moon run cli:build",
-    "reset": "npm run rm:cache && npm run rm:node_modules && npm run rm:dist",
+    "clear": "npm run rm:cache && npm run rm:node_modules && npm run rm:dist",
     "rm:cache": "rm -rf ./.moon/cache",
     "rm:dist": "rimraf -g ./packages/**/dist && rimraf -g ./apps/**/dist",
     "rm:node_modules": "rimraf -g apps/**/node_modules && rimraf -g packages/**/node_modules"
