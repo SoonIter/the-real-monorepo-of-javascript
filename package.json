@@ -5,7 +5,8 @@
   "description": "you can write some infra devDependencies here, but do not use this package as dependencies",
   "main": "",
   "scripts": {
-    "bootstrap": "yarn",
+    "prepare": "simple-git-hooks",
+    "bootstrap": "pnpm install",
     "moon": "./node_modules/.bin/moon",
     "web:build": "moon run web:build",
     "cli:build": "moon run cli:build",
@@ -19,7 +20,18 @@
     "lint-staged": "^13.1.2",
     "eslint": "^8.35.0",
     "@commitlint/cli": "^17.4.4",
-    "@moonrepo/cli": "^0.24.0"
+    "@commitlint/config-conventional": "^17.4.4",
+    "@moonrepo/cli": "^0.24.0",
+    "simple-git-hooks": "2.8.1"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "./node_modules/.bin/lint-staged",
+    "commit-msg": "./node_modules/.bin/commitlint -e $HUSKY_GIT_PARAMS"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue,md}": [
+      "eslint --fix"
+    ]
   },
   "keywords": [],
   "author": "",

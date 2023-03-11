@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "react": "18.2.0",
-    "@real-monorepo/util": "workspace:*",
+    "@real-monorepo/util": "../util",
     "tsup": "^6.6.3"
   },
   "peerDependencies": {
