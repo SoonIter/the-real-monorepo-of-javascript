@@ -4,8 +4,8 @@ importers:
 
   .:
     specifiers:
-      '@real-monorepo/sdk': workspace:*
-      '@real-monorepo/util': workspace:*
+      '@real-monorepo/sdk': ../../packages/sdk
+      '@real-monorepo/util': ../../packages/util
       tsup: ^6.6.3
     devDependencies:
       '@real-monorepo/sdk': link:../../packages/sdk

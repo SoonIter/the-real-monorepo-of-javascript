@@ -6,12 +6,10 @@
 ├── apps
 │   ├── cli
 │   │   ├── package.json
-│   │   ├── pnpm-lock.yaml
-│   │   └── pnpm-workspace.yaml
+│   │   └── pnpm-lock.yaml
 │   └── web
 │       ├── package.json
-│       ├── pnpm-lock.yaml
-│       └── pnpm-workspace.yaml
+│       └── pnpm-lock.yaml
 ├── package.json
 └── packages
     ├── component

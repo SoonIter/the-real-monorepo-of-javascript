@@ -14,6 +14,6 @@
     "@rspack/cli": "latest",
     "typescript": "^4.9.5",
     "@svgr/webpack": "6.5.1",
-    "@real-monorepo/component": "workspace:*"
+    "@real-monorepo/component": "../../packages/component"
   }
 }

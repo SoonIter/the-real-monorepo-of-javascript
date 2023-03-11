@@ -6,8 +6,8 @@
     "cli": "./dist/index.js"
   },
   "devDependencies": {
-    "@real-monorepo/util": "workspace:*",
-    "@real-monorepo/sdk": "workspace:*",
+    "@real-monorepo/util": "../../packages/util",
+    "@real-monorepo/sdk": "../../packages/sdk",
     "tsup": "^6.6.3"
   },
   "scripts": {
